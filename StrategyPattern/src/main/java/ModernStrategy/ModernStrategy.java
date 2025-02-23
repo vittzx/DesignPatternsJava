@@ -1,12 +1,13 @@
 package ModernStrategy;
 
+import java.util.Optional;
 import java.util.function.Consumer;
 
 public class ModernStrategy {
     public static void main(String[] args) {
         Double amount = 3.5;
-        String PAYMENT_TYPE = "CREDIT_CARD";
-        PaymentChosen.valueOf(PAYMENT_TYPE).pay(amount);
+        final String PAYMENT_TYPE = "CREDIT_CAR";
+        PaymentChosen.checkValue(PAYMENT_TYPE).pay(amount);
     }
 }
 
@@ -36,6 +37,14 @@ enum PaymentChosen {
     // Aceita um valor, invocando ele
     public void pay(Double amount){
         paymentoStrategy.accept(amount);
+    }
+
+    public static PaymentChosen checkValue(String value){
+        try {
+            return PaymentChosen.valueOf(value);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Payment method not supported.");
+        }
     }
 }
 
