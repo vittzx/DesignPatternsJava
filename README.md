@@ -2,7 +2,7 @@
 
 Here is all the content I have been learned using behavior and creational design Patterns with Java.
 
-### Tecnologies 
+### Technologies 
  - Java 17
  - Maven 
 
