@@ -13,4 +13,5 @@ Here is all the content I have been learned using behavior and creational design
 - Chain Responsability (Validation logIn Case)
 - Observer (Notification Case)
 - Adapter Pattern (Unify same class to instance specify class case) 
+- Prototype Pattern (Clonable Shapes [Square, Circle])
 
